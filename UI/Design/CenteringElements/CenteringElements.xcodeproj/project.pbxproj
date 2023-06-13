@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA7205564D93E50B58582133 /* Pods_CenteringElements.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4AE3F969955A79DE1730422 /* Pods_CenteringElements.framework */; };
+		E9AF48DA2A38DF9000A9EDE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AF48D92A38DF9000A9EDE5 /* AppDelegate.swift */; };
+		E9AF48E32A38DF9100A9EDE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9AF48E22A38DF9100A9EDE5 /* Assets.xcassets */; };
+		E9AF48E62A38DF9100A9EDE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9AF48E42A38DF9100A9EDE5 /* LaunchScreen.storyboard */; };
+		E9AF48F32A38E85B00A9EDE5 /* CenteringElementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AF48F22A38E85B00A9EDE5 /* CenteringElementsView.swift */; };
+		E9AF48F52A38E90100A9EDE5 /* CenteringElementsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AF48F42A38E90100A9EDE5 /* CenteringElementsController.swift */; };
+		E9AF48F82A38F85B00A9EDE5 /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AF48F72A38F85B00A9EDE5 /* UIView+Ex.swift */; };
+		E9AF48FA2A3919B300A9EDE5 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9AF48F92A3919B300A9EDE5 /* Colors.xcassets */; };
+		E9AF48FC2A391B9F00A9EDE5 /* UIColor+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AF48FB2A391B9F00A9EDE5 /* UIColor+Ex.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C8E2A44109828617D1E5EFE6 /* Pods-CenteringElements.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CenteringElements.debug.xcconfig"; path = "Target Support Files/Pods-CenteringElements/Pods-CenteringElements.debug.xcconfig"; sourceTree = "<group>"; };
+		D4AE3F969955A79DE1730422 /* Pods_CenteringElements.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CenteringElements.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8126E9B4FC68323EFA5BD71 /* Pods-CenteringElements.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CenteringElements.release.xcconfig"; path = "Target Support Files/Pods-CenteringElements/Pods-CenteringElements.release.xcconfig"; sourceTree = "<group>"; };
+		E9AF48D62A38DF9000A9EDE5 /* CenteringElements.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CenteringElements.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9AF48D92A38DF9000A9EDE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E9AF48E22A38DF9100A9EDE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E9AF48E52A38DF9100A9EDE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E9AF48E72A38DF9100A9EDE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9AF48F22A38E85B00A9EDE5 /* CenteringElementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenteringElementsView.swift; sourceTree = "<group>"; };
+		E9AF48F42A38E90100A9EDE5 /* CenteringElementsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenteringElementsController.swift; sourceTree = "<group>"; };
+		E9AF48F72A38F85B00A9EDE5 /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
+		E9AF48F92A3919B300A9EDE5 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		E9AF48FB2A391B9F00A9EDE5 /* UIColor+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ex.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E9AF48D32A38DF9000A9EDE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA7205564D93E50B58582133 /* Pods_CenteringElements.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E95D1029F8CB38DBD6ABAE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D4AE3F969955A79DE1730422 /* Pods_CenteringElements.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5D7EA133FB517DE29CA34E39 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8E2A44109828617D1E5EFE6 /* Pods-CenteringElements.debug.xcconfig */,
+				D8126E9B4FC68323EFA5BD71 /* Pods-CenteringElements.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E9AF48CD2A38DF9000A9EDE5 = {
+			isa = PBXGroup;
+			children = (
+				E9AF48D82A38DF9000A9EDE5 /* CenteringElements */,
+				E9AF48D72A38DF9000A9EDE5 /* Products */,
+				5D7EA133FB517DE29CA34E39 /* Pods */,
+				1E95D1029F8CB38DBD6ABAE8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E9AF48D72A38DF9000A9EDE5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E9AF48D62A38DF9000A9EDE5 /* CenteringElements.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E9AF48D82A38DF9000A9EDE5 /* CenteringElements */ = {
+			isa = PBXGroup;
+			children = (
+				E9AF48ED2A38E4E900A9EDE5 /* Application */,
+				E9AF48EE2A38E51000A9EDE5 /* View */,
+				E9AF48EF2A38E51700A9EDE5 /* Controller */,
+				E9AF48F62A38F84700A9EDE5 /* Extensions */,
+				E9AF48F02A38E56300A9EDE5 /* Resources */,
+			);
+			path = CenteringElements;
+			sourceTree = "<group>";
+		};
+		E9AF48ED2A38E4E900A9EDE5 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E9AF48D92A38DF9000A9EDE5 /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		E9AF48EE2A38E51000A9EDE5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E9AF48F22A38E85B00A9EDE5 /* CenteringElementsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E9AF48EF2A38E51700A9EDE5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E9AF48F42A38E90100A9EDE5 /* CenteringElementsController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E9AF48F02A38E56300A9EDE5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E9AF48F12A38E56E00A9EDE5 /* Assets */,
+				E9AF48E42A38DF9100A9EDE5 /* LaunchScreen.storyboard */,
+				E9AF48E72A38DF9100A9EDE5 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E9AF48F12A38E56E00A9EDE5 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E9AF48E22A38DF9100A9EDE5 /* Assets.xcassets */,
+				E9AF48F92A3919B300A9EDE5 /* Colors.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		E9AF48F62A38F84700A9EDE5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E9AF48F72A38F85B00A9EDE5 /* UIView+Ex.swift */,
+				E9AF48FB2A391B9F00A9EDE5 /* UIColor+Ex.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E9AF48D52A38DF9000A9EDE5 /* CenteringElements */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9AF48EA2A38DF9100A9EDE5 /* Build configuration list for PBXNativeTarget "CenteringElements" */;
+			buildPhases = (
+				E010EF245C756C7C236E68A8 /* [CP] Check Pods Manifest.lock */,
+				E9AF48D22A38DF9000A9EDE5 /* Sources */,
+				E9AF48D32A38DF9000A9EDE5 /* Frameworks */,
+				E9AF48D42A38DF9000A9EDE5 /* Resources */,
+				F63CA7454C60CF8A1806D71D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CenteringElements;
+			productName = CenteringElements;
+			productReference = E9AF48D62A38DF9000A9EDE5 /* CenteringElements.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E9AF48CE2A38DF9000A9EDE5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					E9AF48D52A38DF9000A9EDE5 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = E9AF48D12A38DF9000A9EDE5 /* Build configuration list for PBXProject "CenteringElements" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E9AF48CD2A38DF9000A9EDE5;
+			productRefGroup = E9AF48D72A38DF9000A9EDE5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E9AF48D52A38DF9000A9EDE5 /* CenteringElements */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E9AF48D42A38DF9000A9EDE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9AF48FA2A3919B300A9EDE5 /* Colors.xcassets in Resources */,
+				E9AF48E62A38DF9100A9EDE5 /* LaunchScreen.storyboard in Resources */,
+				E9AF48E32A38DF9100A9EDE5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E010EF245C756C7C236E68A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CenteringElements-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F63CA7454C60CF8A1806D71D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CenteringElements/Pods-CenteringElements-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CenteringElements/Pods-CenteringElements-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CenteringElements/Pods-CenteringElements-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E9AF48D22A38DF9000A9EDE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9AF48F52A38E90100A9EDE5 /* CenteringElementsController.swift in Sources */,
+				E9AF48F32A38E85B00A9EDE5 /* CenteringElementsView.swift in Sources */,
+				E9AF48FC2A391B9F00A9EDE5 /* UIColor+Ex.swift in Sources */,
+				E9AF48DA2A38DF9000A9EDE5 /* AppDelegate.swift in Sources */,
+				E9AF48F82A38F85B00A9EDE5 /* UIView+Ex.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E9AF48E42A38DF9100A9EDE5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9AF48E52A38DF9100A9EDE5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E9AF48E82A38DF9100A9EDE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E9AF48E92A38DF9100A9EDE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E9AF48EB2A38DF9100A9EDE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8E2A44109828617D1E5EFE6 /* Pods-CenteringElements.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G4T7QK2U75;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CenteringElements/Resources/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Innowise.Starovoytov.CenteringElements;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E9AF48EC2A38DF9100A9EDE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8126E9B4FC68323EFA5BD71 /* Pods-CenteringElements.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G4T7QK2U75;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CenteringElements/Resources/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Innowise.Starovoytov.CenteringElements;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E9AF48D12A38DF9000A9EDE5 /* Build configuration list for PBXProject "CenteringElements" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9AF48E82A38DF9100A9EDE5 /* Debug */,
+				E9AF48E92A38DF9100A9EDE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9AF48EA2A38DF9100A9EDE5 /* Build configuration list for PBXNativeTarget "CenteringElements" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9AF48EB2A38DF9100A9EDE5 /* Debug */,
+				E9AF48EC2A38DF9100A9EDE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E9AF48CE2A38DF9000A9EDE5 /* Project object */;
+}
