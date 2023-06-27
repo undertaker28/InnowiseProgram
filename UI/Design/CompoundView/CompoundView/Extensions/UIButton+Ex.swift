@@ -1,21 +1,20 @@
 //
 //  UIButton+Ex.swift
-//  DynamicUIChanges
+//  CompoundView
 //
-//  Created by Pavel on 25.06.23.
+//  Created by Pavel on 27.06.23.
 //
 
 import UIKit
 
 extension UIButton {
-    func createButton(tagId: Int?, titleName: String, size: CGFloat) -> UIButton {
+    func createButton(titleName: String, size: CGFloat) -> UIButton {
         let button = UIButton()
-        button.tag = tagId ?? 0
         button.setTitle(titleName, for: .normal)
         button.titleLabel?.font = UIFont(name: "MarkPro-Bold", size: size)
         button.tintColor = .white
-        button.backgroundColor = UIColor(named: "UltramarineBlue")
-        button.layer.cornerRadius = 22
+        button.backgroundColor = .black
+        button.layer.cornerRadius = 20
         return button
     }
 }
