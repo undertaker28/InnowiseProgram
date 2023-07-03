@@ -63,8 +63,7 @@ final class StartViewController: UIViewController {
         
         stackView.arrangedSubviews.forEach { button in
             button.snp.makeConstraints {
-                $0.width.equalTo(Constants.buttonWidth)
-                $0.height.equalTo(Constants.buttonHeight)
+                $0.size.equalTo(Constants.buttonSize)
             }
         }
     }

@@ -75,7 +75,7 @@ final class ThirdViewController: UIViewController {
         
         stackViewOfButtons.arrangedSubviews.forEach { button in
             button.snp.makeConstraints {
-                $0.height.equalTo(Constants.buttonHeight)
+                $0.height.equalTo(Constants.buttonSize.height)
             }
         }
     }

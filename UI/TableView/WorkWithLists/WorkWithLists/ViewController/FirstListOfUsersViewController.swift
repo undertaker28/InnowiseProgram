@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 final class FirstListOfUsersViewController: UIViewController {
-    private lazy var fakeUsers = UserGenerator().generateUsers(count: 30)
+    private lazy var fakeUsers = UserGenerator().generateUsers(count: Constants.numberOfFakeUsersToGenerate)
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -31,7 +31,7 @@ final class FirstListOfUsersViewController: UIViewController {
     
     private func makeConstraints() {
         tableView.snp.makeConstraints {
-            $0.top.bottom.trailing.leading.equalToSuperview()
+            $0.edges.equalToSuperview()
         }
     }
 }
@@ -53,7 +53,7 @@ extension FirstListOfUsersViewController: UITableViewDataSource {
         
         cell.cellAvatarView.URLImage(url: user.squareAvatarUrl)
         cell.cellFirstLine.text = "\(user.firstName) \(user.lastName)"
-        cell.cellSecondLine.text = "\(user.age)"
+        cell.cellSecondLine.text = "Age: \(user.age)"
         
         if user.sex == "Male" {
             cell.cellGenderIconView.image = UIImage(named: "Male")?.withRenderingMode(.alwaysTemplate)

@@ -27,6 +27,7 @@
 		E952445E2A5217B40045FA59 /* FifthListOfUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E952445D2A5217B40045FA59 /* FifthListOfUsersViewController.swift */; };
 		E95244602A521F840045FA59 /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E952445F2A521F840045FA59 /* UIView+Ex.swift */; };
 		E98499D92A52D2E0005EFEFE /* SecondListOfUsersTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98499D82A52D2E0005EFEFE /* SecondListOfUsersTableCell.swift */; };
+		E98499DB2A52F82F005EFEFE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98499DA2A52F82F005EFEFE /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		E952445D2A5217B40045FA59 /* FifthListOfUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthListOfUsersViewController.swift; sourceTree = "<group>"; };
 		E952445F2A521F840045FA59 /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
 		E98499D82A52D2E0005EFEFE /* SecondListOfUsersTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondListOfUsersTableCell.swift; sourceTree = "<group>"; };
+		E98499DA2A52F82F005EFEFE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			children = (
 				E952443F2A518EC40045FA59 /* Assets */,
 				E952444D2A51A55B0045FA59 /* Fonts */,
+				E98499DA2A52F82F005EFEFE /* Constants.swift */,
 				E95244332A518E510045FA59 /* LaunchScreen.storyboard */,
 				E95244362A518E510045FA59 /* Info.plist */,
 			);
@@ -324,6 +327,7 @@
 				E95244602A521F840045FA59 /* UIView+Ex.swift in Sources */,
 				E95244522A51F9200045FA59 /* FirstListOfUsersTableCell.swift in Sources */,
 				E952445C2A52179D0045FA59 /* FourthListOfUsersViewController.swift in Sources */,
+				E98499DB2A52F82F005EFEFE /* Constants.swift in Sources */,
 				E95244452A5191220045FA59 /* UserGenerator.swift in Sources */,
 				E952442D2A518E500045FA59 /* FirstListOfUsersViewController.swift in Sources */,
 				E95244562A5215200045FA59 /* UIImageView+Ex.swift in Sources */,

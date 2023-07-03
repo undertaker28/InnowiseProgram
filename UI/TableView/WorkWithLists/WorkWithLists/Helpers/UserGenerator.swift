@@ -14,10 +14,10 @@ final class UserGenerator {
     private let sexes = ["Male", "Female"]
     private let avatarUrl = URL(string: "https://image.cnbcfm.com/api/v1/image/105773423-1551716977818rtx6p9yw.jpg?v=1551717428&w=700&h=700")!
     private let descriptions = [
-        ["I love hiking and exploring new places.", "Passionate about photography and capturing beautiful moments."],
-        ["Enjoys reading books and writing poetry.", "Loves cooking and experimenting with new recipes."],
-        ["Sports enthusiast, especially basketball and swimming.", "Tech geek, always excited about the latest gadgets."],
-        ["Avid traveler, always seeking new adventures.", "Passionate about volunteering and making a difference in the community."]
+        "I love hiking and exploring new places.", "Passionate about photography and capturing beautiful moments.",
+        "Enjoys reading books and writing poetry.", "Loves cooking and experimenting with new recipes.",
+        "Sports enthusiast, especially basketball and swimming.", "Tech geek, always excited about the latest gadgets.",
+        "Avid traveler, always seeking new adventures.", "Passionate about volunteering and making a difference in the community."
     ]
     
     func generateUsers(count: Int) -> [User] {
@@ -28,13 +28,25 @@ final class UserGenerator {
             let firstName = generateFirstName(for: sex)
             let lastName = lastNames.randomElement() ?? ""
             let age = Int.random(in: 18...60)
-            let description = descriptions.randomElement() ?? []
+            let description = generateDescription()
             
             let user = User(firstName: firstName, lastName: lastName, age: age, sex: sex, squareAvatarUrl: avatarUrl, description: description)
             users.append(user)
         }
         
         return users
+    }
+    
+    private func generateDescription() -> [String] {
+        let numberOfLines = Int.random(in: 1...3)
+        var uniqueLines: Set<String> = []
+        
+        while uniqueLines.count < numberOfLines {
+            let randomLine = descriptions.randomElement() ?? ""
+            uniqueLines.insert(randomLine)
+        }
+        
+        return Array(uniqueLines)
     }
     
     private func generateFirstName(for sex: String) -> String {
