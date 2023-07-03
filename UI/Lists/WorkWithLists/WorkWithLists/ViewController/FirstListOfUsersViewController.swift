@@ -1,5 +1,5 @@
 //
-//  SecondListOfUsersViewController.swift
+//  FirstListOfUsersViewController.swift
 //  WorkWithLists
 //
 //  Created by Pavel on 2.07.23.
@@ -8,16 +8,15 @@
 import UIKit
 import SnapKit
 
-final class SecondListOfUsersViewController: UIViewController {
+final class FirstListOfUsersViewController: UIViewController {
     private lazy var fakeUsers = UserGenerator().generateUsers(count: Constants.numberOfFakeUsersToGenerate)
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.dataSource = self
-        tableView.register(SecondListOfUsersTableCell.self, forCellReuseIdentifier: "secondListOfUsersTableCell")
+        tableView.register(FirstListOfUsersTableCell.self, forCellReuseIdentifier: String(describing: FirstListOfUsersTableCell.self))
+        tableView.rowHeight = 72
         tableView.backgroundColor = UIColor(named: "Black")
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 88
         tableView.separatorColor = .lightGray
         tableView.tableHeaderView = UIView()
         return tableView
@@ -37,14 +36,14 @@ final class SecondListOfUsersViewController: UIViewController {
     }
 }
 
-extension SecondListOfUsersViewController: UITableViewDataSource {
+extension FirstListOfUsersViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return fakeUsers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "secondListOfUsersTableCell", for: indexPath) as? SecondListOfUsersTableCell else {
-            fatalError("Unable to dequeue SecondListOfUsersTableCell")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: FirstListOfUsersTableCell.self), for: indexPath) as? FirstListOfUsersTableCell else {
+            fatalError("Unable to dequeue \(FirstListOfUsersTableCell.self)")
         }
         
         cell.selectionStyle = .none
@@ -55,7 +54,6 @@ extension SecondListOfUsersViewController: UITableViewDataSource {
         cell.cellAvatarView.URLImage(url: user.squareAvatarUrl)
         cell.cellFirstLine.text = "\(user.firstName) \(user.lastName)"
         cell.cellSecondLine.text = "Age: \(user.age)"
-        cell.cellThirdLine.text = user.description.joined(separator: "\n")
         
         if user.sex == "Male" {
             cell.cellGenderIconView.image = UIImage(named: "Male")?.withRenderingMode(.alwaysTemplate)

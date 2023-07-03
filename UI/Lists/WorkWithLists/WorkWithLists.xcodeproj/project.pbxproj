@@ -28,6 +28,7 @@
 		E95244602A521F840045FA59 /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E952445F2A521F840045FA59 /* UIView+Ex.swift */; };
 		E98499D92A52D2E0005EFEFE /* SecondListOfUsersTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98499D82A52D2E0005EFEFE /* SecondListOfUsersTableCell.swift */; };
 		E98499DB2A52F82F005EFEFE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98499DA2A52F82F005EFEFE /* Constants.swift */; };
+		E98499DD2A530B08005EFEFE /* ThirdListOfUsersCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98499DC2A530B08005EFEFE /* ThirdListOfUsersCollectionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		E952445F2A521F840045FA59 /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
 		E98499D82A52D2E0005EFEFE /* SecondListOfUsersTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondListOfUsersTableCell.swift; sourceTree = "<group>"; };
 		E98499DA2A52F82F005EFEFE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E98499DC2A530B08005EFEFE /* ThirdListOfUsersCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdListOfUsersCollectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 			children = (
 				E95244512A51F9200045FA59 /* FirstListOfUsersTableCell.swift */,
 				E98499D82A52D2E0005EFEFE /* SecondListOfUsersTableCell.swift */,
+				E98499DC2A530B08005EFEFE /* ThirdListOfUsersCollectionCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E98499DD2A530B08005EFEFE /* ThirdListOfUsersCollectionCell.swift in Sources */,
 				E952445A2A5217780045FA59 /* ThirdListOfUsersViewController.swift in Sources */,
 				E95244582A5217480045FA59 /* SecondListOfUsersViewController.swift in Sources */,
 				E95244602A521F840045FA59 /* UIView+Ex.swift in Sources */,
