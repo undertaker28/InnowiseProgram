@@ -10,7 +10,7 @@ import Foundation
 final class UserGenerator {
     private let maleFirstNames = ["John", "Michael", "Robert", "William", "David", "James", "Joseph", "Daniel", "Matthew", "Andrew"]
     private let femaleFirstNames = ["Emma", "Sophia", "Olivia", "Isabella", "Ava", "Mia", "Emily", "Charlotte", "Amelia", "Grace"]
-    private let lastNames = ["Smith", "Johnson", "Williams", "Brown", "Jones", "Davis"]
+    let lastNames = ["Smith", "Johnson", "Williams", "Brown", "Jones", "Davis", "Miller", "Wilson", "Moore", "Taylor", "Anderson", "Thomas", "Jackson", "White", "Harris", "Martin", "Thompson", "Garcia", "Martinez", "Robinson", "Clark", "Rodriguez", "Lewis", "Lee", "Walker", "Hall", "Allen", "Young", "King", "Wright", "Lopez"]
     private let sexes = ["Male", "Female"]
     private let avatarUrl = URL(string: "https://image.cnbcfm.com/api/v1/image/105773423-1551716977818rtx6p9yw.jpg?v=1551717428&w=700&h=700")!
     private let descriptions = [
@@ -39,9 +39,9 @@ final class UserGenerator {
     
     private func generateFirstName(for sex: String) -> String {
         if sex == "Male" {
-            return maleFirstNames.randomElement() ?? ""
+            return maleFirstNames.randomElement() ?? "Mike"
         } else {
-            return femaleFirstNames.randomElement() ?? ""
+            return femaleFirstNames.randomElement() ?? "Eva"
         }
     }
 }
