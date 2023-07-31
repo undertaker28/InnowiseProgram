@@ -1,5 +1,5 @@
 //
-//  ThirdListOfUsersViewController.swift
+//  ThirdGridCollectionViewController.swift
 //  WorkWithLists
 //
 //  Created by Pavel on 2.07.23.
@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-final class ThirdListOfUsersViewController: UIViewController {
+final class ThirdGridCollectionViewController: UIViewController {
     private let categories = Constants.categories
     private let icons = Constants.icons
     private let colors = Constants.colors
@@ -17,7 +17,7 @@ final class ThirdListOfUsersViewController: UIViewController {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(ThirdListOfUsersCollectionCell.self, forCellWithReuseIdentifier: String(describing: ThirdListOfUsersCollectionCell.self))
+        collectionView.register(ThirdGridCollectionCell.self, forCellWithReuseIdentifier: ThirdGridCollectionCell.identifer)
         collectionView.showsVerticalScrollIndicator = false
         collectionView.backgroundColor = UIColor(named: "Black")
         return collectionView
@@ -38,7 +38,7 @@ final class ThirdListOfUsersViewController: UIViewController {
     }
 }
 
-extension ThirdListOfUsersViewController: UICollectionViewDelegateFlowLayout {
+extension ThirdGridCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
         let widthPerItem = collectionView.frame.width / 2 - layout.minimumLineSpacing / 2
@@ -46,14 +46,14 @@ extension ThirdListOfUsersViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension ThirdListOfUsersViewController: UICollectionViewDataSource {
+extension ThirdGridCollectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return Constants.numberOfElementsInThirdScreen
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: ThirdListOfUsersCollectionCell.self), for: indexPath) as? ThirdListOfUsersCollectionCell else {
-            fatalError("Unable to dequeue \(ThirdListOfUsersCollectionCell.self)")
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ThirdGridCollectionCell.identifer, for: indexPath) as? ThirdGridCollectionCell else {
+            preconditionFailure("Failed to load collection view cell")
         }
         
         cell.categoryLabel.text = categories[indexPath.row % categories.count].uppercased()

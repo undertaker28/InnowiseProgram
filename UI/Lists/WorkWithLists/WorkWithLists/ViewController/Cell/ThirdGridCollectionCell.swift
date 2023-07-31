@@ -1,5 +1,5 @@
 //
-//  ThirdListOfUsersCollectionCell.swift
+//  ThirdGridCollectionCell.swift
 //  WorkWithLists
 //
 //  Created by Pavel on 3.07.23.
@@ -7,7 +7,9 @@
 
 import UIKit
 
-final class ThirdListOfUsersCollectionCell: UICollectionViewCell {
+final class ThirdGridCollectionCell: UICollectionViewCell {
+    static let identifer = "thirdGridCollectionCell"
+
     lazy var categoryLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "MarkPro-Bold", size: 17)

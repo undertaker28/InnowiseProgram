@@ -1,5 +1,5 @@
 //
-//  FirstListOfUsersTableCell.swift
+//  FirstAndFifthListOfUsersTableCell.swift
 //  WorkWithLists
 //
 //  Created by Pavel on 2.07.23.
@@ -7,7 +7,9 @@
 
 import UIKit
 
-final class FirstListOfUsersTableCell: UITableViewCell {
+final class FirstAndFifthListOfUsersTableCell: UITableViewCell {
+    static let identifer = "firstAndFifthListOfUsersTableCell"
+
     lazy var cellAvatarView: UIImageView = {
         let imageView = UIImageView()
         imageView.clipsToBounds = true
@@ -39,7 +41,7 @@ final class FirstListOfUsersTableCell: UITableViewCell {
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: String(describing: FirstListOfUsersTableCell.self))
+        super.init(style: style, reuseIdentifier: FirstAndFifthListOfUsersTableCell.identifer)
         self.add(subviews: cellAvatarView, stackView, cellGenderIconView)
         makeConstraints()
     }

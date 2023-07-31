@@ -12,10 +12,19 @@ enum Constants {
     static let numberOfFakeUsersToGenerate = 30
     static let numberOfElementsInThirdScreen = 20
     
+    // MARK: - Mosaic Collection Configuration
+    static let numberOfCellsInPattern = 8
+    static let numberOfElementsInPattern = 4
+    static let numberOfElementsInFourthScreen = 20
+    static let numberOfElementsForAnimeInfo = 2
+    
     // MARK: - Cell Sizes
     static let cellAvatarSize: CGFloat = 40
     static let cellGenderIconSize: CGFloat = 24
     static let collectionCellHeight: CGFloat = 100
+    
+    // MARK: - EmptyView Size
+    static let emptyViewSize = CGSize(width: 360, height: 200)
     
     // MARK: - Insets
     static let commonInset: CGFloat = 16

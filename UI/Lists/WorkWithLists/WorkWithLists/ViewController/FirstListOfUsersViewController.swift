@@ -9,12 +9,12 @@ import UIKit
 import SnapKit
 
 final class FirstListOfUsersViewController: UIViewController {
-    private lazy var fakeUsers = UserGenerator().generateUsers(count: Constants.numberOfFakeUsersToGenerate)
+    private lazy var fakeUsers = UserDataGenerator().generateUsers(count: Constants.numberOfFakeUsersToGenerate)
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.dataSource = self
-        tableView.register(FirstListOfUsersTableCell.self, forCellReuseIdentifier: String(describing: FirstListOfUsersTableCell.self))
+        tableView.register(FirstAndFifthListOfUsersTableCell.self, forCellReuseIdentifier: FirstAndFifthListOfUsersTableCell.identifer)
         tableView.rowHeight = 72
         tableView.backgroundColor = UIColor(named: "Black")
         tableView.separatorColor = .lightGray
@@ -42,8 +42,8 @@ extension FirstListOfUsersViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: FirstListOfUsersTableCell.self), for: indexPath) as? FirstListOfUsersTableCell else {
-            fatalError("Unable to dequeue \(FirstListOfUsersTableCell.self)")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: FirstAndFifthListOfUsersTableCell.identifer, for: indexPath) as? FirstAndFifthListOfUsersTableCell else {
+            preconditionFailure("Failed to load table view cell")
         }
         
         cell.selectionStyle = .none

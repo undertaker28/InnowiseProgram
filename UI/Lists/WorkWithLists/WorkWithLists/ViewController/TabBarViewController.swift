@@ -65,9 +65,9 @@ final class TabBarViewController: UITabBarController {
             case 1:
                 viewController = SecondListOfUsersViewController()
             case 2:
-                viewController = ThirdListOfUsersViewController()
+                viewController = ThirdGridCollectionViewController()
             case 3:
-                viewController = FourthListOfUsersViewController()
+                viewController = FourthMosaicCollectionViewController()
             case 4:
                 viewController = FifthListOfUsersViewController()
             default:

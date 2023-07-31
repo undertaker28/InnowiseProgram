@@ -1,5 +1,5 @@
 //
-//  UserGenerator.swift
+//  UserDataGenerator.swift
 //  WorkWithLists
 //
 //  Created by Pavel on 2.07.23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class UserGenerator {
+final class UserDataGenerator {
     private let maleFirstNames = ["John", "Michael", "Robert", "William", "David", "James", "Joseph", "Daniel", "Matthew", "Andrew"]
     private let femaleFirstNames = ["Emma", "Sophia", "Olivia", "Isabella", "Ava", "Mia", "Emily", "Charlotte", "Amelia", "Grace"]
     let lastNames = ["Smith", "Johnson", "Williams", "Brown", "Jones", "Davis", "Miller", "Wilson", "Moore", "Taylor", "Anderson", "Thomas", "Jackson", "White", "Harris", "Martin", "Thompson", "Garcia", "Martinez", "Robinson", "Clark", "Rodriguez", "Lewis", "Lee", "Walker", "Hall", "Allen", "Young", "King", "Wright", "Lopez"]

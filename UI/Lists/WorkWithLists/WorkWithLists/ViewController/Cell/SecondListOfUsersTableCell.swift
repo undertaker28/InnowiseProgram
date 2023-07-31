@@ -8,6 +8,8 @@
 import UIKit
 
 final class SecondListOfUsersTableCell: UITableViewCell {
+    static let identifer = "secondListOfUsersTableCell"
+
     lazy var cellAvatarView: UIImageView = {
         let imageView = UIImageView()
         imageView.clipsToBounds = true
@@ -47,7 +49,7 @@ final class SecondListOfUsersTableCell: UITableViewCell {
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: String(describing: SecondListOfUsersTableCell.self))
+        super.init(style: style, reuseIdentifier: SecondListOfUsersTableCell.identifer)
         self.add(subviews: cellAvatarView, stackView, cellGenderIconView)
         makeConstraints()
     }
