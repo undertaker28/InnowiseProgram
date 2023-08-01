@@ -1,0 +1,11 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '16.0'
+
+target 'Chronometer' do
+
+  use_frameworks!
+
+  #UI
+  pod 'SnapKit'
+
+end

@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C686DED98D23D53924A17907 /* Pods_Chronometer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EB02D01CAB081170B95A25E /* Pods_Chronometer.framework */; };
+		E94554C62A7916E8005E82AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94554C52A7916E8005E82AF /* AppDelegate.swift */; };
+		E94554CA2A7916E8005E82AF /* ChronometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94554C92A7916E8005E82AF /* ChronometerViewController.swift */; };
+		E94554CF2A7916E9005E82AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E94554CE2A7916E9005E82AF /* Assets.xcassets */; };
+		E94554D22A7916E9005E82AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E94554D02A7916E9005E82AF /* LaunchScreen.storyboard */; };
+		E94554DF2A791BBC005E82AF /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94554DE2A791BBC005E82AF /* UIView+Ex.swift */; };
+		E94554E22A791FBF005E82AF /* MarkPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E94554E12A791FBF005E82AF /* MarkPro-Bold.otf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2EB02D01CAB081170B95A25E /* Pods_Chronometer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Chronometer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F6B730E5D6CD589888982B2 /* Pods-Chronometer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chronometer.debug.xcconfig"; path = "Target Support Files/Pods-Chronometer/Pods-Chronometer.debug.xcconfig"; sourceTree = "<group>"; };
+		B664CD9CF49EB5C4367DCDB3 /* Pods-Chronometer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Chronometer.release.xcconfig"; path = "Target Support Files/Pods-Chronometer/Pods-Chronometer.release.xcconfig"; sourceTree = "<group>"; };
+		E94554C22A7916E8005E82AF /* Chronometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chronometer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E94554C52A7916E8005E82AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E94554C92A7916E8005E82AF /* ChronometerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChronometerViewController.swift; sourceTree = "<group>"; };
+		E94554CE2A7916E9005E82AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E94554D12A7916E9005E82AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E94554D32A7916E9005E82AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E94554DE2A791BBC005E82AF /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
+		E94554E12A791FBF005E82AF /* MarkPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MarkPro-Bold.otf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E94554BF2A7916E8005E82AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C686DED98D23D53924A17907 /* Pods_Chronometer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		197FCBDE4A088B2029B08096 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F6B730E5D6CD589888982B2 /* Pods-Chronometer.debug.xcconfig */,
+				B664CD9CF49EB5C4367DCDB3 /* Pods-Chronometer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8581DDB317CD6E76066ADE85 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2EB02D01CAB081170B95A25E /* Pods_Chronometer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E94554B92A7916E8005E82AF = {
+			isa = PBXGroup;
+			children = (
+				E94554C42A7916E8005E82AF /* Chronometer */,
+				E94554C32A7916E8005E82AF /* Products */,
+				197FCBDE4A088B2029B08096 /* Pods */,
+				8581DDB317CD6E76066ADE85 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E94554C32A7916E8005E82AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E94554C22A7916E8005E82AF /* Chronometer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E94554C42A7916E8005E82AF /* Chronometer */ = {
+			isa = PBXGroup;
+			children = (
+				E94554D92A79170B005E82AF /* Application */,
+				E94554DA2A79171A005E82AF /* ViewController */,
+				E94554DD2A791BB1005E82AF /* Extensions */,
+				E94554DB2A79172F005E82AF /* Resources */,
+			);
+			path = Chronometer;
+			sourceTree = "<group>";
+		};
+		E94554D92A79170B005E82AF /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E94554C52A7916E8005E82AF /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		E94554DA2A79171A005E82AF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E94554C92A7916E8005E82AF /* ChronometerViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E94554DB2A79172F005E82AF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E94554DC2A79173C005E82AF /* Assets */,
+				E94554E02A791F7F005E82AF /* Fonts */,
+				E94554D02A7916E9005E82AF /* LaunchScreen.storyboard */,
+				E94554D32A7916E9005E82AF /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E94554DC2A79173C005E82AF /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E94554CE2A7916E9005E82AF /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		E94554DD2A791BB1005E82AF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E94554DE2A791BBC005E82AF /* UIView+Ex.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E94554E02A791F7F005E82AF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E94554E12A791FBF005E82AF /* MarkPro-Bold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E94554C12A7916E8005E82AF /* Chronometer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E94554D62A7916E9005E82AF /* Build configuration list for PBXNativeTarget "Chronometer" */;
+			buildPhases = (
+				62CD093999A20E00E9D28A9F /* [CP] Check Pods Manifest.lock */,
+				E94554BE2A7916E8005E82AF /* Sources */,
+				E94554BF2A7916E8005E82AF /* Frameworks */,
+				E94554C02A7916E8005E82AF /* Resources */,
+				4EA1F8A26F3C71B94379C5DB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chronometer;
+			productName = Chronometer;
+			productReference = E94554C22A7916E8005E82AF /* Chronometer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E94554BA2A7916E8005E82AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					E94554C12A7916E8005E82AF = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = E94554BD2A7916E8005E82AF /* Build configuration list for PBXProject "Chronometer" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E94554B92A7916E8005E82AF;
+			productRefGroup = E94554C32A7916E8005E82AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E94554C12A7916E8005E82AF /* Chronometer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E94554C02A7916E8005E82AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E94554E22A791FBF005E82AF /* MarkPro-Bold.otf in Resources */,
+				E94554D22A7916E9005E82AF /* LaunchScreen.storyboard in Resources */,
+				E94554CF2A7916E9005E82AF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4EA1F8A26F3C71B94379C5DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chronometer/Pods-Chronometer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Chronometer/Pods-Chronometer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Chronometer/Pods-Chronometer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62CD093999A20E00E9D28A9F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Chronometer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E94554BE2A7916E8005E82AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E94554CA2A7916E8005E82AF /* ChronometerViewController.swift in Sources */,
+				E94554C62A7916E8005E82AF /* AppDelegate.swift in Sources */,
+				E94554DF2A791BBC005E82AF /* UIView+Ex.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E94554D02A7916E9005E82AF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E94554D12A7916E9005E82AF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E94554D42A7916E9005E82AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E94554D52A7916E9005E82AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E94554D72A7916E9005E82AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F6B730E5D6CD589888982B2 /* Pods-Chronometer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G4T7QK2U75;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Chronometer/Resources/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Innowise.Starovoytov.Chronometer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E94554D82A7916E9005E82AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B664CD9CF49EB5C4367DCDB3 /* Pods-Chronometer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G4T7QK2U75;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Chronometer/Resources/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Innowise.Starovoytov.Chronometer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E94554BD2A7916E8005E82AF /* Build configuration list for PBXProject "Chronometer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E94554D42A7916E9005E82AF /* Debug */,
+				E94554D52A7916E9005E82AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E94554D62A7916E9005E82AF /* Build configuration list for PBXNativeTarget "Chronometer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E94554D72A7916E9005E82AF /* Debug */,
+				E94554D82A7916E9005E82AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E94554BA2A7916E8005E82AF /* Project object */;
+}
