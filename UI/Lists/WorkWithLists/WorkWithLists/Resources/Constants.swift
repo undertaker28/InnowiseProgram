@@ -18,13 +18,13 @@ enum Constants {
     static let numberOfElementsInFourthScreen = 20
     static let numberOfElementsForAnimeInfo = 2
     
-    // MARK: - Cell Sizes
+    // MARK: - Sizes
     static let cellAvatarSize: CGFloat = 40
     static let cellGenderIconSize: CGFloat = 24
     static let collectionCellHeight: CGFloat = 100
-    
-    // MARK: - EmptyView Size
+    static let cellCoverImageSize: CGFloat = 90
     static let emptyViewSize = CGSize(width: 360, height: 200)
+    static let noUsersAvailableImageSize: CGFloat = 100
     
     // MARK: - Insets
     static let commonInset: CGFloat = 16

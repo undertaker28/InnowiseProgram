@@ -38,7 +38,7 @@ final class CoverImageCell: UICollectionViewCell {
     private func makeConstraints() {
         cellCoverImage.snp.makeConstraints {
             $0.center.equalToSuperview()
-            $0.size.equalTo(90)
+            $0.size.equalTo(Constants.cellCoverImageSize)
         }
     }
 }

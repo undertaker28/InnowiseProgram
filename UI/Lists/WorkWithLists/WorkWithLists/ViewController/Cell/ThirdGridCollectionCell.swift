@@ -40,6 +40,19 @@ final class ThirdGridCollectionCell: UICollectionViewCell {
     private func setupCell() {
         self.layer.cornerRadius = 5
         self.clipsToBounds = true
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        self.addGestureRecognizer(tapGestureRecognizer)
+        self.isUserInteractionEnabled = true
+    }
+    
+    @objc private func handleTap() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.layer.transform = CATransform3DMakeRotation(CGFloat.pi, 0.0, 1.0, 0.0)
+        }) { (finished) in
+            UIView.animate(withDuration: 0.5, animations: {
+                self.layer.transform = CATransform3DIdentity
+            })
+        }
     }
     
     private func makeConstraints() {

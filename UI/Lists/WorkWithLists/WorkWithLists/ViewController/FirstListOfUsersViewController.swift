@@ -46,6 +46,12 @@ extension FirstListOfUsersViewController: UITableViewDataSource {
             preconditionFailure("Failed to load table view cell")
         }
         
+        if indexPath == tableView.lastCellIndexPath {
+            cell.separatorInset = UIEdgeInsets(top: 0, left: tableView.bounds.width + 1, bottom: 0, right: 0)
+        } else {
+            cell.separatorInset = .zero
+        }
+        
         cell.selectionStyle = .none
         cell.backgroundColor = UIColor(named: "Black")
         

@@ -17,6 +17,7 @@
 		E93941F22A76A226000A6794 /* SeasonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93941F12A76A226000A6794 /* SeasonCell.swift */; };
 		E93941F42A76A23D000A6794 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93941F32A76A23C000A6794 /* TitleCell.swift */; };
 		E93941F62A76A249000A6794 /* RatingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93941F52A76A249000A6794 /* RatingCell.swift */; };
+		E94554B82A785085005E82AF /* UITableView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94554B72A785085005E82AF /* UITableView+Ex.swift */; };
 		E95244292A518E500045FA59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95244282A518E500045FA59 /* AppDelegate.swift */; };
 		E952442D2A518E500045FA59 /* FirstListOfUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E952442C2A518E500045FA59 /* FirstListOfUsersViewController.swift */; };
 		E95244322A518E510045FA59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E95244312A518E510045FA59 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		E93941F12A76A226000A6794 /* SeasonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonCell.swift; sourceTree = "<group>"; };
 		E93941F32A76A23C000A6794 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 		E93941F52A76A249000A6794 /* RatingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingCell.swift; sourceTree = "<group>"; };
+		E94554B72A785085005E82AF /* UITableView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ex.swift"; sourceTree = "<group>"; };
 		E95244252A518E500045FA59 /* WorkWithLists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkWithLists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E95244282A518E500045FA59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E952442C2A518E500045FA59 /* FirstListOfUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstListOfUsersViewController.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				E95244492A5194F00045FA59 /* UITabBarController+Ex.swift */,
 				E95244552A5215200045FA59 /* UIImageView+Ex.swift */,
 				E952445F2A521F840045FA59 /* UIView+Ex.swift */,
+				E94554B72A785085005E82AF /* UITableView+Ex.swift */,
 			);
 			path = UIExtensions;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				E93941F42A76A23D000A6794 /* TitleCell.swift in Sources */,
 				E9E343442A77BD2900CF4C42 /* EmptyView.swift in Sources */,
 				E952442D2A518E500045FA59 /* FirstListOfUsersViewController.swift in Sources */,
+				E94554B82A785085005E82AF /* UITableView+Ex.swift in Sources */,
 				E95244562A5215200045FA59 /* UIImageView+Ex.swift in Sources */,
 				E98499D92A52D2E0005EFEFE /* SecondListOfUsersTableCell.swift in Sources */,
 				E952444A2A5194F00045FA59 /* UITabBarController+Ex.swift in Sources */,
