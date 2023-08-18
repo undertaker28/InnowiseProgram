@@ -18,6 +18,12 @@ final class Sun {
     }
 }
 
+extension Sun: NSCopying {
+    func copy(with zone: NSZone? = nil) -> Any {
+        return self
+    }
+}
+
 class Client {
     static func testSingleton() {
         let instance1 = Sun.shared

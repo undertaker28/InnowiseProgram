@@ -8,22 +8,17 @@
 import Foundation
 
 final class UserDefaultsHelper {
-    enum UserDefaultsKeys: String {
-        case token
-    }
+    private let defaults = UserDefaults.standard
     
     func setToken(value: String) {
-        let defaults = UserDefaults.standard
-        defaults.set(value, forKey: UserDefaultsKeys.token.rawValue)
+        defaults.set(value, forKey: "token")
     }
     
     func getToken() -> String? {
-        let defaults = UserDefaults.standard
-        return defaults.string(forKey: UserDefaultsKeys.token.rawValue)
+        return defaults.string(forKey: "token")
     }
     
     func clearToken() {
-       let defaults = UserDefaults.standard
-       defaults.removeObject(forKey: UserDefaultsKeys.token.rawValue)
+       defaults.removeObject(forKey: "token")
     }
 }

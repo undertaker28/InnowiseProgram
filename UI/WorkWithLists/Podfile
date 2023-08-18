@@ -5,10 +5,10 @@ target 'WorkWithLists' do
 
   use_frameworks!
   
-  #UI
+  # UI
   pod 'SnapKit'
   
-  #Network
+  # Network
   pod 'Alamofire'
 
 end

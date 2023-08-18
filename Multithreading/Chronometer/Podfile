@@ -5,7 +5,7 @@ target 'Chronometer' do
 
   use_frameworks!
 
-  #UI
+  # UI
   pod 'SnapKit'
 
 end
