@@ -1,9 +1,8 @@
 class UserManager {
-    private var apiManager: ApiManager
+    private var apiManager: APIManager
     private var cacheManager: CacheManager
-
-    init(apiManager: ApiManager = ApiManager(),
-         cacheManager: CacheManager = CacheManager()) {
+    
+    init(apiManager: APIManager = APIManager(), cacheManager: CacheManager = CacheManager()) {
         self.apiManager = apiManager
         self.cacheManager = cacheManager
     }
@@ -22,7 +21,7 @@ class UserManager {
     }
 }
 
-class ApiManager {
+class APIManager {
     func getUserData() -> String {
         return "User data from API"
     }
@@ -45,7 +44,7 @@ class Client {
     }
 }
 
-let apiManager = ApiManager()
+let apiManager = APIManager()
 let cacheManager = CacheManager()
 let userManager = UserManager(apiManager: apiManager, cacheManager: cacheManager)
 Client.getUserData(userManager: userManager)

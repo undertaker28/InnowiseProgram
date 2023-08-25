@@ -19,6 +19,7 @@ final class WeatherFirstViewController: UIViewController {
         button.backgroundColor = .black
         button.layer.cornerRadius = 22
         button.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
+        button.addPressAnimation()
         return button
     }()
     

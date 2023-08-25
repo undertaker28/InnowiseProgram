@@ -22,12 +22,14 @@ final class SecondViewController: UIViewController {
     private lazy var addViewButton: UIButton = {
         let button = UIButton().createButton(tagId: nil, titleName: "Add", size: 20)
         button.addTarget(self, action: #selector(addViewButtonTapped), for: .touchUpInside)
+        button.addPressAnimation()
         return button
     }()
     
     private lazy var removeViewButton: UIButton = {
         let button = UIButton().createButton(tagId: nil, titleName: "Remove", size: 20)
         button.addTarget(self, action: #selector(removeViewButtonTapped), for: .touchUpInside)
+        button.addPressAnimation()
         return button
     }()
     

@@ -45,29 +45,29 @@ final class CenteringElementsView: UIView {
     private func makeConstraints() {
         stackView.snp.makeConstraints {
             $0.centerY.equalToSuperview()
-            $0.left.right.equalToSuperview().inset(10)
+            $0.left.right.equalToSuperview().inset(Constants.commonInset)
         }
         
         view1.snp.makeConstraints {
-            $0.height.equalTo(50)
-            $0.leading.trailing.equalToSuperview().inset(10)
-            $0.top.equalTo(stackView).offset(10)
+            $0.height.equalTo(Constants.commonHeight)
+            $0.leading.trailing.equalToSuperview().inset(Constants.commonInset)
+            $0.top.equalTo(stackView).offset(Constants.commonInset)
         }
         
         view2.snp.makeConstraints {
-            $0.height.equalTo(50)
-            $0.leading.trailing.equalToSuperview().inset(10)
+            $0.height.equalTo(Constants.commonHeight)
+            $0.leading.trailing.equalToSuperview().inset(Constants.commonInset)
         }
         
         view3.snp.makeConstraints {
-            $0.height.equalTo(50)
-            $0.leading.trailing.equalToSuperview().inset(10)
+            $0.height.equalTo(Constants.commonHeight)
+            $0.leading.trailing.equalToSuperview().inset(Constants.commonInset)
         }
         
         button.snp.makeConstraints {
-            $0.height.equalTo(50)
-            $0.leading.trailing.equalToSuperview().inset(10)
-            $0.bottom.equalTo(stackView).offset(-10)
+            $0.height.equalTo(Constants.commonHeight)
+            $0.leading.trailing.equalToSuperview().inset(Constants.commonInset)
+            $0.bottom.equalTo(stackView).offset(-Constants.commonInset)
         }
     }
 }

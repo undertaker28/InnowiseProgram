@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct NearEatsApp: App {
-    @StateObject private var userStateViewModel = UserStateViewModel()
+    @StateObject private var userStateViewModel = UserStateViewModel(userDefaultsHelper: UserDefaultsHelperImpl(), fileSystemService: FileSystemServiceImpl())
     @StateObject private var networkMonitor = NetworkMonitor()
     
     var body: some Scene {

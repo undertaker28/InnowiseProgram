@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DetailNearbyPlacesView: View {
-    @StateObject private var detailNearbyPlacesViewModel = DetailNearbyPlacesViewModel()
+    @StateObject private var detailNearbyPlacesViewModel = DetailNearbyPlacesViewModel(fileSystemService: FileSystemServiceImpl(), networkingService: NetworkingServiceImpl())
     var placeDetail: Place
     @EnvironmentObject private var networkMonitor: NetworkMonitor
     
@@ -35,9 +35,7 @@ struct DetailNearbyPlacesView: View {
                         
                         TipsListView(tips: detailNearbyPlacesViewModel.tipsList)
                     }
-                    .padding(.top, 5)
-                    .padding([.leading, .trailing], 15)
-                    .padding(.bottom, 80)
+                    .padding(EdgeInsets(top: 5, leading: 15, bottom: 80, trailing: 15))
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
             }

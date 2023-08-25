@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ImageSliderView: View {
-    var photos: [Photo]
+    private(set) var photos: [Photo]
 
     var body: some View {
         TabView {

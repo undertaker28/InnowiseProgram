@@ -18,12 +18,14 @@ final class UpdateCounterViewController: UIViewController {
     private lazy var cancelButton: UIButton = {
         let button = UIButton().createButton(titleName: "Cancel", size: 20)
         button.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
+        button.addPressAnimation()
         return button
     }()
     
     private lazy var updateButton: UIButton = {
         let button = UIButton().createButton(titleName: "Update", size: 20)
         button.addTarget(self, action: #selector(updateButtonTapped), for: .touchUpInside)
+        button.addPressAnimation()
         return button
     }()
     

@@ -25,6 +25,7 @@ struct MainView: View {
                     .tag(Tab.profile)
                     .animation(nil, value: tabSelected)
             }
+            
             VStack {
                 Spacer()
                 CustomTabBar(selectedTab: $tabSelected)

@@ -104,7 +104,7 @@ class AutomatedCycle {
             print("Company name:", transport.companyName)
             print("Maximum payload:", transport.maxPayload, "tons")
             print("Maximum cargo size:", transport.maxCargoSize, "meters")
-
+            
             switch transport {
             case let seaTransport as SeaTransport:
                 print("Ship type:", seaTransport.shipType.rawValue)

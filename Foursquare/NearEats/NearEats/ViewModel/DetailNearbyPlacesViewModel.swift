@@ -12,35 +12,41 @@ final class DetailNearbyPlacesViewModel: ObservableObject {
     @Published private(set) var tipsList: [Tip] = []
     @Published private(set) var photosList: [Photo] = []
     private var cancellables = Set<AnyCancellable>()
-    private let fileSystemService = FileSystemService()
+    private let fileSystemService: FileSystemService
+    private let networkingService: NetworkingService
+
+    init(fileSystemService: FileSystemService, networkingService: NetworkingService) {
+        self.fileSystemService = fileSystemService
+        self.networkingService = networkingService
+    }
     
     func getTipsList(fsq_id: String, isConnected: Bool) {
         if isConnected {
             let endpointTips = Endpoint.tips(fsq_id: fsq_id)
-            NetworkingService.download(url: endpointTips.path, headers: endpointTips.headers, parameters: endpointTips.parameters)
+            networkingService.download(url: endpointTips.path, headers: endpointTips.headers, parameters: endpointTips.parameters)
                 .decode(type: [Tip].self, decoder: JSONDecoder())
-                .sink(receiveCompletion: NetworkingService.handleCompletion, receiveValue: { [weak self] tipsList in
+                .sink(receiveCompletion: networkingService.handleCompletion, receiveValue: { [weak self] tipsList in
                     self?.tipsList = tipsList
-                    self?.fileSystemService.saveTips(forPlaceId: fsq_id, tips: tipsList)
+                    self?.fileSystemService.save(tipsList, toDictionaryWithKey: "Tips: " + fsq_id)
                 })
                 .store(in: &cancellables)
         } else {
-            tipsList = fileSystemService.fetchTips(forPlaceId: fsq_id)
+            tipsList = fileSystemService.fetch(fromDictionaryWithKey: "Tips: " + fsq_id)
         }
     }
     
     func getPhotosList(fsq_id: String, isConnected: Bool) {
         if isConnected {
             let endpointPhotos = Endpoint.photos(fsq_id: fsq_id)
-            NetworkingService.download(url: endpointPhotos.path, headers: endpointPhotos.headers, parameters: endpointPhotos.parameters)
+            networkingService.download(url: endpointPhotos.path, headers: endpointPhotos.headers, parameters: endpointPhotos.parameters)
                 .decode(type: [Photo].self, decoder: JSONDecoder())
-                .sink(receiveCompletion: NetworkingService.handleCompletion, receiveValue: { [weak self] photosList in
+                .sink(receiveCompletion: networkingService.handleCompletion, receiveValue: { [weak self] photosList in
                     self?.photosList = photosList
-                    self?.fileSystemService.savePhotos(forPlaceId: fsq_id, photos: photosList)
+                    self?.fileSystemService.save(photosList, toDictionaryWithKey: "Photos: " + fsq_id)
                 })
                 .store(in: &cancellables)
         } else {
-            photosList = fileSystemService.fetchPhotos(forPlaceId: fsq_id)
+            photosList = fileSystemService.fetch(fromDictionaryWithKey: "Photos: " + fsq_id)
         }
     }
 }

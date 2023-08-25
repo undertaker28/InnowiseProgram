@@ -23,6 +23,7 @@ final class CompoundViewController: UIViewController {
     private lazy var previousButton: UIButton = {
         let button = UIButton().createButton(titleName: "Previous", size: 17)
         button.addTarget(self, action: #selector(previousButtonTapped), for: .touchUpInside)
+        button.addPressAnimation()
         return button
     }()
     
@@ -38,6 +39,7 @@ final class CompoundViewController: UIViewController {
     private lazy var nextButton: UIButton = {
         let button = UIButton().createButton(titleName: "Next", size: 17)
         button.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
+        button.addPressAnimation()
         return button
     }()
     

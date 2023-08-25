@@ -20,12 +20,14 @@ final class ThirdViewController: UIViewController {
     private lazy var addAlphaButton: UIButton = {
         let button = UIButton().createButton(tagId: nil, titleName: "Add alpha", size: 20)
         button.addTarget(self, action: #selector(addAlphaButtonTapped), for: .touchUpInside)
+        button.addPressAnimation()
         return button
     }()
     
     private lazy var removeAlphaButton: UIButton = {
         let button = UIButton().createButton(tagId: nil, titleName: "Remove alpha", size: 20)
         button.addTarget(self, action: #selector(removeAlphaButtonTapped), for: .touchUpInside)
+        button.addPressAnimation()
         return button
     }()
     

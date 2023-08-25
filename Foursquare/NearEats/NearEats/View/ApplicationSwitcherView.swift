@@ -9,7 +9,11 @@ import SwiftUI
 
 struct ApplicationSwitcherView: View {
     @EnvironmentObject private var userStateViewModel: UserStateViewModel
-    private let userDefaultsHelper = UserDefaultsHelper()
+    private let userDefaultsHelper: UserDefaultsHelper
+
+    init(userDefaultsHelper: UserDefaultsHelper) {
+        self.userDefaultsHelper = userDefaultsHelper
+    }
     
     var body: some View {
         if userDefaultsHelper.getToken() != nil {

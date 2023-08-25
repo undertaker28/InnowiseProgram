@@ -12,6 +12,7 @@ final class ReadyScreenLayoutController: UIViewController {
     private var currentIndex = 0
     private var realIndex = 0
     private var timer: Timer?
+    private lazy var profiles = ProfileDataGenerator().generateRandomProfiles(count: Constants.numberOfProfilesToGenerate)
     
     override func loadView() {
         view = readyScreenLayoutView
@@ -40,15 +41,15 @@ final class ReadyScreenLayoutController: UIViewController {
     
     @objc private func updateView() {
         currentIndex += 1
-        realIndex = currentIndex % Constants.profiles.count
-        readyScreenLayoutView.nameTextLabel.text = Constants.profiles[realIndex].name
-        readyScreenLayoutView.profilePictureView.image = UIImage(named: Constants.profiles[realIndex].profileImage)
-        readyScreenLayoutView.lastAccessTimeTextLabel.text = "\(Constants.profiles[realIndex].lastAccessTime)" + " Days Ago"
-        readyScreenLayoutView.usersTextLabel.text = "\(Constants.profiles[realIndex].numberOfRecommendedUsers)" + " / " + "\(Constants.profiles[realIndex].numberOfAllUsers)"
-        readyScreenLayoutView.viewingsTextLabel.text = "\(Constants.profiles[realIndex].numberOfViewings)"
-        readyScreenLayoutView.commentsTextLabel.text = "\(Constants.profiles[realIndex].numberOfMessages)"
-        readyScreenLayoutView.likesTextLabel.text = "\(Constants.profiles[realIndex].numberOfLikes)"
-        readyScreenLayoutView.numberOfRemainingUsersTextLabel.text = "+\(Constants.profiles[realIndex].numberOfRecommendedUsers)"
+        realIndex = currentIndex % profiles.count
+        readyScreenLayoutView.nameTextLabel.text = profiles[realIndex].name
+        readyScreenLayoutView.profilePictureView.image = UIImage(named: profiles[realIndex].profileImage)
+        readyScreenLayoutView.lastAccessTimeTextLabel.text = "\(profiles[realIndex].lastAccessTime)" + " Days Ago"
+        readyScreenLayoutView.usersTextLabel.text = "\(profiles[realIndex].numberOfRecommendedUsers)" + " / " + "\(profiles[realIndex].numberOfAllUsers)"
+        readyScreenLayoutView.viewingsTextLabel.text = "\(profiles[realIndex].numberOfViewings)"
+        readyScreenLayoutView.commentsTextLabel.text = "\(profiles[realIndex].numberOfMessages)"
+        readyScreenLayoutView.likesTextLabel.text = "\(profiles[realIndex].numberOfLikes)"
+        readyScreenLayoutView.numberOfRemainingUsersTextLabel.text = "+\(profiles[realIndex].numberOfRemainingUsers)"
     }
     
     private func configureItems() {

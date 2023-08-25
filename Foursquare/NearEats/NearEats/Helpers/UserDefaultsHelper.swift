@@ -7,7 +7,13 @@
 
 import Foundation
 
-final class UserDefaultsHelper {
+protocol UserDefaultsHelper {
+    func setToken(value: String)
+    func getToken() -> String?
+    func clearToken()
+}
+
+final class UserDefaultsHelperImpl: UserDefaultsHelper {
     private let defaults = UserDefaults.standard
     
     func setToken(value: String) {

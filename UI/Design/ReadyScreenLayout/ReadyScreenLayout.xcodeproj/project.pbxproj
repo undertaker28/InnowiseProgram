@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		758E369BD4E3C5EB4A2CDD4E /* Pods_ReadyScreenLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D0D62559C010D751D4790D /* Pods_ReadyScreenLayout.framework */; };
+		E90EEDF02A93965300A19280 /* ProfileDataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90EEDEF2A93965300A19280 /* ProfileDataGenerator.swift */; };
+		E90EEDF22A93976E00A19280 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E90EEDF12A93976E00A19280 /* Images.xcassets */; };
+		E90EEDF42A939CBA00A19280 /* UIButton+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90EEDF32A939CBA00A19280 /* UIButton+Ex.swift */; };
 		E91724EC2A40505B0083DE00 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E91724EB2A40505B0083DE00 /* Colors.xcassets */; };
 		E91724EF2A4053500083DE00 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91724EE2A4053500083DE00 /* Constants.swift */; };
 		E91724F12A40587F0083DE00 /* UIImageView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91724F02A40587F0083DE00 /* UIImageView+Ex.swift */; };
@@ -26,6 +29,9 @@
 /* Begin PBXFileReference section */
 		439F4B15DB47D08537BA5410 /* Pods-ReadyScreenLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReadyScreenLayout.release.xcconfig"; path = "Target Support Files/Pods-ReadyScreenLayout/Pods-ReadyScreenLayout.release.xcconfig"; sourceTree = "<group>"; };
 		C57B63BDE01D8647FB7152EB /* Pods-ReadyScreenLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReadyScreenLayout.debug.xcconfig"; path = "Target Support Files/Pods-ReadyScreenLayout/Pods-ReadyScreenLayout.debug.xcconfig"; sourceTree = "<group>"; };
+		E90EEDEF2A93965300A19280 /* ProfileDataGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataGenerator.swift; sourceTree = "<group>"; };
+		E90EEDF12A93976E00A19280 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E90EEDF32A939CBA00A19280 /* UIButton+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ex.swift"; sourceTree = "<group>"; };
 		E91724EB2A40505B0083DE00 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		E91724EE2A4053500083DE00 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E91724F02A40587F0083DE00 /* UIImageView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ex.swift"; sourceTree = "<group>"; };
@@ -73,6 +79,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E90EEDEE2A93962300A19280 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E90EEDEF2A93965300A19280 /* ProfileDataGenerator.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		E91724F22A4061FB0083DE00 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +120,7 @@
 				E91724F22A4061FB0083DE00 /* Model */,
 				E91D674C2A3F1E860040A281 /* View */,
 				E91D674E2A3F1EA00040A281 /* Controller */,
+				E90EEDEE2A93962300A19280 /* Helpers */,
 				E91D675D2A3FBC4E0040A281 /* UIExtensions */,
 				E91D674D2A3F1E950040A281 /* Resources */,
 			);
@@ -153,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				E91D67402A3F1E430040A281 /* Assets.xcassets */,
+				E90EEDF12A93976E00A19280 /* Images.xcassets */,
 				E91724EB2A40505B0083DE00 /* Colors.xcassets */,
 			);
 			path = Assets;
@@ -172,6 +188,7 @@
 			children = (
 				E91D675E2A3FBC5F0040A281 /* UIView+Ex.swift */,
 				E91724F02A40587F0083DE00 /* UIImageView+Ex.swift */,
+				E90EEDF32A939CBA00A19280 /* UIButton+Ex.swift */,
 			);
 			path = UIExtensions;
 			sourceTree = "<group>";
@@ -239,6 +256,7 @@
 				E91724EC2A40505B0083DE00 /* Colors.xcassets in Resources */,
 				E91D67562A3F8C1C0040A281 /* MarkPro-Bold.otf in Resources */,
 				E91D67442A3F1E430040A281 /* LaunchScreen.storyboard in Resources */,
+				E90EEDF22A93976E00A19280 /* Images.xcassets in Resources */,
 				E91D67582A3F8C210040A281 /* WorkSans-Regular.otf in Resources */,
 				E91D67412A3F1E430040A281 /* Assets.xcassets in Resources */,
 			);
@@ -293,10 +311,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E90EEDF42A939CBA00A19280 /* UIButton+Ex.swift in Sources */,
 				E91D675C2A3FBBB80040A281 /* GradientButtonView.swift in Sources */,
 				E91D67512A3F1ED70040A281 /* ReadyScreenLayoutView.swift in Sources */,
 				E91D67382A3F1E420040A281 /* AppDelegate.swift in Sources */,
 				E91D67532A3F1EE90040A281 /* ReadyScreenLayoutController.swift in Sources */,
+				E90EEDF02A93965300A19280 /* ProfileDataGenerator.swift in Sources */,
 				E91D675F2A3FBC5F0040A281 /* UIView+Ex.swift in Sources */,
 				E91724EF2A4053500083DE00 /* Constants.swift in Sources */,
 				E91724F12A40587F0083DE00 /* UIImageView+Ex.swift in Sources */,

@@ -44,9 +44,9 @@ extension Endpoint {
                     "ll": "53.9057644,27.5582305",
                     "radius": "4000",
                     "limit": "30",
-                    "token": UserDefaultsHelper().getToken() ?? ""]
+                    "token": UserDefaultsHelperImpl().getToken() ?? ""]
         case .tips, .photos:
-            return ["token": UserDefaultsHelper().getToken() ?? ""]
+            return ["token": UserDefaultsHelperImpl().getToken() ?? ""]
         }
     }
 }

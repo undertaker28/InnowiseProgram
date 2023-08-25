@@ -1,23 +1,13 @@
 //
 //  UIButton+Ex.swift
-//  CompoundView
+//  ReadyScreenLayout
 //
-//  Created by Pavel on 27.06.23.
+//  Created by Pavel on 21.08.23.
 //
 
 import UIKit
 
 extension UIButton {
-    func createButton(titleName: String, size: CGFloat) -> UIButton {
-        let button = UIButton()
-        button.setTitle(titleName, for: .normal)
-        button.titleLabel?.font = UIFont(name: "MarkPro-Bold", size: size)
-        button.tintColor = .white
-        button.backgroundColor = .black
-        button.layer.cornerRadius = 20
-        return button
-    }
-    
     func addPressAnimation() {
         addTarget(self, action: #selector(animateDown), for: [.touchDown, .touchDragEnter])
         addTarget(self, action: #selector(animateUp), for: [.touchDragExit, .touchCancel, .touchUpInside, .touchUpOutside])

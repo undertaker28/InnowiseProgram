@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Root: Codable {
+struct Response: Codable {
     let results: [Place]
 }
 

@@ -10,13 +10,18 @@ import OAuthSwift
 
 @MainActor
 final class UserStateViewModel: ObservableObject {
-    private let userDefaultsHelper = UserDefaultsHelper()
-    private let fileSystemService = FileSystemService()
+    private let userDefaultsHelper: UserDefaultsHelper
+    private let fileSystemService: FileSystemService
     @Published var isLoggedIn = false
-    private var oauthswift = OAuth2Swift(consumerKey: AuthConfiguration.consumerKey, consumerSecret: AuthConfiguration.consumerSecret, authorizeUrl: AuthConfiguration.baseUrl + AuthConfiguration.authorizeUrl, responseType: AuthConfiguration.responseType)
+    private var oauthSwift = OAuth2Swift(consumerKey: AuthConfiguration.consumerKey, consumerSecret: AuthConfiguration.consumerSecret, authorizeUrl: AuthConfiguration.baseUrl + AuthConfiguration.authorizeUrl, responseType: AuthConfiguration.responseType)
+
+    init(userDefaultsHelper: UserDefaultsHelper, fileSystemService: FileSystemService) {
+        self.userDefaultsHelper = userDefaultsHelper
+        self.fileSystemService = fileSystemService
+    }
     
     func logIn() async {
-        oauthswift.authorize(withCallbackURL: URL(string: AuthConfiguration.callbackUrl)!, scope: "", state: "", completionHandler: { result in
+        oauthSwift.authorize(withCallbackURL: URL(string: AuthConfiguration.callbackUrl)!, scope: "", state: "", completionHandler: { result in
             switch result {
             case .success((_, _, let parameters)):
                 DispatchQueue.main.async {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AA7205564D93E50B58582133 /* Pods_CenteringElements.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4AE3F969955A79DE1730422 /* Pods_CenteringElements.framework */; };
+		E98884BF2A922D4A009C9DA0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98884BE2A922D4A009C9DA0 /* Constants.swift */; };
 		E9AF48DA2A38DF9000A9EDE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AF48D92A38DF9000A9EDE5 /* AppDelegate.swift */; };
 		E9AF48E32A38DF9100A9EDE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9AF48E22A38DF9100A9EDE5 /* Assets.xcassets */; };
 		E9AF48E62A38DF9100A9EDE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9AF48E42A38DF9100A9EDE5 /* LaunchScreen.storyboard */; };
@@ -22,6 +23,7 @@
 		C8E2A44109828617D1E5EFE6 /* Pods-CenteringElements.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CenteringElements.debug.xcconfig"; path = "Target Support Files/Pods-CenteringElements/Pods-CenteringElements.debug.xcconfig"; sourceTree = "<group>"; };
 		D4AE3F969955A79DE1730422 /* Pods_CenteringElements.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CenteringElements.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8126E9B4FC68323EFA5BD71 /* Pods-CenteringElements.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CenteringElements.release.xcconfig"; path = "Target Support Files/Pods-CenteringElements/Pods-CenteringElements.release.xcconfig"; sourceTree = "<group>"; };
+		E98884BE2A922D4A009C9DA0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E9AF48D62A38DF9000A9EDE5 /* CenteringElements.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CenteringElements.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9AF48D92A38DF9000A9EDE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9AF48E22A38DF9100A9EDE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				E9AF48F12A38E56E00A9EDE5 /* Assets */,
+				E98884BE2A922D4A009C9DA0 /* Constants.swift */,
 				E9AF48E42A38DF9100A9EDE5 /* LaunchScreen.storyboard */,
 				E9AF48E72A38DF9100A9EDE5 /* Info.plist */,
 			);
@@ -265,6 +268,7 @@
 				E9AF48FC2A391B9F00A9EDE5 /* UIColor+Ex.swift in Sources */,
 				E9AF48DA2A38DF9000A9EDE5 /* AppDelegate.swift in Sources */,
 				E9AF48F82A38F85B00A9EDE5 /* UIView+Ex.swift in Sources */,
+				E98884BF2A922D4A009C9DA0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

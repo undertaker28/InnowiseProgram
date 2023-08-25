@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TipsListView: View {
-    var tips: [Tip]
+    private(set) var tips: [Tip]
 
     var body: some View {
         ForEach(tips) { tip in

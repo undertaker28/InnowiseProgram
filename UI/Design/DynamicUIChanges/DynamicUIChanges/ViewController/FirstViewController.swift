@@ -23,12 +23,14 @@ final class FirstViewController: UIViewController {
     private lazy var hideButton: UIButton = {
         let button = UIButton().createButton(tagId: nil, titleName: "Hide", size: 20)
         button.addTarget(self, action: #selector(hideButtonTapped), for: .touchUpInside)
+        button.addPressAnimation()
         return button
     }()
     
     private lazy var showButton: UIButton = {
         let button = UIButton().createButton(tagId: nil, titleName: "Show", size: 20)
         button.addTarget(self, action: #selector(showButtonTapped), for: .touchUpInside)
+        button.addPressAnimation()
         return button
     }()
     

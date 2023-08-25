@@ -7,119 +7,61 @@
 
 import Foundation
 
-final class FileSystemService {
-    private let dataSourceURLForPlaces: URL
-    private let dataSourceURLForTips: URL
-    private let dataSourceURLForPhotos: URL
+protocol FileSystemService {
+    func save<T: Codable>(_ data: [T], toDictionaryWithKey key: String)
+    func fetch<T: Codable>(fromDictionaryWithKey key: String) -> [T]
+    func deleteAllFiles()
+}
+
+final class FileSystemServiceImpl: FileSystemService {
+    private let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
     
-    init() {
-        let documentsPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        dataSourceURLForPlaces = documentsPath.appendingPathComponent("Places.json")
-        dataSourceURLForTips = documentsPath.appendingPathComponent("Tips.json")
-        dataSourceURLForPhotos = documentsPath.appendingPathComponent("Photos.json")
-    }
-    
-    func savePlaces(_ places: [Place]) {
+    func save<T: Codable>(_ data: [T], toDictionaryWithKey key: String) {
+        var decodedArray: [T] = fetch(fromDictionaryWithKey: key)
+
+        decodedArray.append(contentsOf: data)
+
         let encoder = JSONEncoder()
-        let placesData = try? encoder.encode(places)
-        if let placesData = placesData {
+        if let encodedData = try? encoder.encode(decodedArray) {
+            let url = documentsPath.appendingPathComponent("\(key).json")
             do {
-                try placesData.write(to: dataSourceURLForPlaces)
-                print("Places saved successfully")
+                try encodedData.write(to: url)
+                print("\(key) saved successfully")
             } catch {
-                print("Error saving places: \(error)")
-            }
-        }
-    }
-    
-    func fetchPlaces() -> [Place] {
-        do {
-            let placesData = try Data(contentsOf: dataSourceURLForPlaces)
-            let decoder = JSONDecoder()
-            let places = try decoder.decode([Place].self, from: placesData)
-            return places
-        } catch {
-            print("Error fetching places: \(error)")
-            return []
-        }
-    }
-    
-    func saveTips(forPlaceId placeId: String, tips: [Tip]) {
-        var tipsDictionary = fetchTipsDictionary()
-        tipsDictionary[placeId] = tips
-        saveTipsDictionary(tipsDictionary)
-    }
-    
-    func fetchTips(forPlaceId placeId: String) -> [Tip] {
-        let tipsDictionary = fetchTipsDictionary()
-        return tipsDictionary[placeId] ?? []
-    }
-    
-    func savePhotos(forPlaceId placeId: String, photos: [Photo]) {
-        var photosDictionary = fetchPhotosDictionary()
-        photosDictionary[placeId] = photos
-        savePhotosDictionary(photosDictionary)
-    }
-    
-    func fetchPhotos(forPlaceId placeId: String) -> [Photo] {
-        let photosDictionary = fetchPhotosDictionary()
-        return photosDictionary[placeId] ?? []
-    }
-    
-    private func fetchTipsDictionary() -> [String: [Tip]] {
-        do {
-            let tipsData = try Data(contentsOf: dataSourceURLForTips)
-            let decoder = JSONDecoder()
-            let tipsDictionary = try decoder.decode([String: [Tip]].self, from: tipsData)
-            return tipsDictionary
-        } catch {
-            return [:]
-        }
-    }
-    
-    private func saveTipsDictionary(_ tipsDictionary: [String: [Tip]]) {
-        let encoder = JSONEncoder()
-        if let tipsData = try? encoder.encode(tipsDictionary) {
-            do {
-                try tipsData.write(to: dataSourceURLForTips)
-            } catch {
-                print("Error saving tips dictionary: \(error)")
+                print("Error saving \(key): \(error)")
             }
         }
     }
 
-    private func fetchPhotosDictionary() -> [String: [Photo]] {
+    func fetch<T: Codable>(fromDictionaryWithKey key: String) -> [T] {
+        let url = documentsPath.appendingPathComponent("\(key).json")
         do {
-            let photosData = try Data(contentsOf: dataSourceURLForPhotos)
+            let data = try Data(contentsOf: url)
             let decoder = JSONDecoder()
-            let photosDictionary = try decoder.decode([String: [Photo]].self, from: photosData)
-            return photosDictionary
+            let decodedArray = try decoder.decode([T].self, from: data)
+            return decodedArray
         } catch {
-            return [:]
+            print("Error fetching \(key): \(error)")
         }
-    }
-    
-    private func savePhotosDictionary(_ photosDictionary: [String: [Photo]]) {
-        let encoder = JSONEncoder()
-        if let photosData = try? encoder.encode(photosDictionary) {
-            do {
-                try photosData.write(to: dataSourceURLForPhotos)
-            } catch {
-                print("Error saving photos dictionary: \(error)")
-            }
-        }
+        return []
     }
     
     func deleteAllFiles() {
-        let fileURLs = [dataSourceURLForPlaces, dataSourceURLForTips, dataSourceURLForPhotos]
-        
-        for fileURL in fileURLs {
-            do {
-                try FileManager.default.removeItem(at: fileURL)
-                print("\(fileURL) deleted successfully")
-            } catch {
-                print("Error deleting \(fileURL): \(error)")
+        do {
+            let fileURLs = try FileManager.default.contentsOfDirectory(at: documentsPath, includingPropertiesForKeys: nil, options: [])
+            
+            for fileURL in fileURLs {
+                if fileURL.pathExtension == "json" {
+                    do {
+                        try FileManager.default.removeItem(at: fileURL)
+                        print("\(fileURL) deleted successfully")
+                    } catch {
+                        print("Error deleting \(fileURL): \(error)")
+                    }
+                }
             }
+        } catch {
+            print("Error listing files in documents directory: \(error)")
         }
     }
 }

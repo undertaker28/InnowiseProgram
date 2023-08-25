@@ -19,6 +19,7 @@ final class CustomViewController: UIViewController {
         button.backgroundColor = UIColor(named: "SmaltBlue")
         button.layer.cornerRadius = 5
         button.addTarget(self, action: #selector(updateProgressButtonTapped), for: .touchUpInside)
+        button.addPressAnimation()
         return button
     }()
 

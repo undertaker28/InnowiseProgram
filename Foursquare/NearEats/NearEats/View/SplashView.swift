@@ -12,7 +12,7 @@ struct SplashView: View {
     
     var body: some View {
         if isActive {
-            ApplicationSwitcherView()
+            ApplicationSwitcherView(userDefaultsHelper: UserDefaultsHelperImpl())
         } else {
             Image("FoursquareLogo")
                 .resizable()

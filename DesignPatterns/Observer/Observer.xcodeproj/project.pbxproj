@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6E8A6A98A503C9E4DA6FE2AC /* Pods_Observer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E65522D769C8A7BDFA1D21 /* Pods_Observer.framework */; };
+		E90EEDF82A93A00300A19280 /* UIButton+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90EEDF72A93A00300A19280 /* UIButton+Ex.swift */; };
 		E97EE5832A4386EB00B97355 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97EE5822A4386EB00B97355 /* AppDelegate.swift */; };
 		E97EE58C2A4386EC00B97355 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E97EE58B2A4386EC00B97355 /* Assets.xcassets */; };
 		E97EE58F2A4386EC00B97355 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E97EE58D2A4386EC00B97355 /* LaunchScreen.storyboard */; };
@@ -25,6 +26,7 @@
 		791C8FD47D91E77FC270E39E /* Pods-Observer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Observer.release.xcconfig"; path = "Target Support Files/Pods-Observer/Pods-Observer.release.xcconfig"; sourceTree = "<group>"; };
 		A3973CDB84E38147DF89A34E /* Pods-Observer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Observer.debug.xcconfig"; path = "Target Support Files/Pods-Observer/Pods-Observer.debug.xcconfig"; sourceTree = "<group>"; };
 		D2E65522D769C8A7BDFA1D21 /* Pods_Observer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Observer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E90EEDF72A93A00300A19280 /* UIButton+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ex.swift"; sourceTree = "<group>"; };
 		E97EE57F2A4386EB00B97355 /* Observer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Observer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E97EE5822A4386EB00B97355 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E97EE58B2A4386EC00B97355 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				E9CDA73E2A45B78600FCBC98 /* UIView+Ex.swift */,
+				E90EEDF72A93A00300A19280 /* UIButton+Ex.swift */,
 			);
 			path = UIExtensions;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				E97EE59E2A4387A400B97355 /* WeatherFirstViewController.swift in Sources */,
 				E97EE5832A4386EB00B97355 /* AppDelegate.swift in Sources */,
 				E9CDA73F2A45B78600FCBC98 /* UIView+Ex.swift in Sources */,
+				E90EEDF82A93A00300A19280 /* UIButton+Ex.swift in Sources */,
 				E9CDA7412A4635AA00FCBC98 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

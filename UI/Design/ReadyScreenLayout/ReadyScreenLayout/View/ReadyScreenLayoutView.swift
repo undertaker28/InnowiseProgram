@@ -77,6 +77,7 @@ final class ReadyScreenLayoutView: UIView {
         button.setTitle("Follow", for: .normal)
         button.titleLabel?.font = UIFont(name: "MarkPro-Bold", size: 18)
         button.tintColor = .white
+        button.addPressAnimation()
         return button
     }()
     

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NearbyPlacesView: View {
-    @StateObject private var nearbyPlacesViewModel = NearbyPlacesViewModel()
+    @StateObject private var nearbyPlacesViewModel = NearbyPlacesViewModel(fileSystemService: FileSystemServiceImpl(), networkingService: NetworkingServiceImpl())
     @State private var isLoading = true
     @State private var searchText = ""
     @EnvironmentObject private var networkMonitor: NetworkMonitor

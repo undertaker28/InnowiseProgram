@@ -77,15 +77,15 @@ final class ScrollView: UIView {
         
         for view in stackView.arrangedSubviews {
             view.snp.makeConstraints {
-                $0.height.equalTo(250)
-                $0.left.right.equalTo(contentView).inset(50)
+                $0.height.equalTo(Constants.viewHeight)
+                $0.left.right.equalTo(contentView).inset(Constants.commonInset)
             }
         }
         
         button.snp.makeConstraints {
-            $0.height.equalTo(50)
-            $0.left.right.equalTo(contentView).inset(50)
-            $0.bottom.equalTo(safeAreaLayoutGuide).inset(30)
+            $0.height.equalTo(Constants.buttonHeight)
+            $0.left.right.equalTo(contentView).inset(Constants.commonInset)
+            $0.bottom.equalTo(safeAreaLayoutGuide).inset(Constants.buttonBottomInset)
         }
     }
     

@@ -11,19 +11,25 @@ import Combine
 final class NearbyPlacesViewModel: ObservableObject {
     @Published private(set) var nearbyPlacesList: [Place] = []
     private var cancellables = Set<AnyCancellable>()
-    private let fileSystemService = FileSystemService()
+    private let fileSystemService: FileSystemService
+    private let networkingService: NetworkingService
+
+    init(fileSystemService: FileSystemService, networkingService: NetworkingService) {
+        self.fileSystemService = fileSystemService
+        self.networkingService = networkingService
+    }
     
     func getNearbyPlaces(isConnected: Bool) {
         if isConnected {
-            NetworkingService.download(url: Endpoint.places.path, headers: Endpoint.places.headers, parameters: Endpoint.places.parameters)
-                .decode(type: Root.self, decoder: JSONDecoder())
-                .sink(receiveCompletion: NetworkingService.handleCompletion, receiveValue: { [weak self] nearbyPlacesList in
+            networkingService.download(url: Endpoint.places.path, headers: Endpoint.places.headers, parameters: Endpoint.places.parameters)
+                .decode(type: Response.self, decoder: JSONDecoder())
+                .sink(receiveCompletion: networkingService.handleCompletion, receiveValue: { [weak self] nearbyPlacesList in
                     self?.nearbyPlacesList = nearbyPlacesList.results
-                    self?.fileSystemService.savePlaces(nearbyPlacesList.results)
+                    self?.fileSystemService.save(nearbyPlacesList.results, toDictionaryWithKey: "AllPlaces")
                 })
                 .store(in: &cancellables)
         } else {
-            nearbyPlacesList = fileSystemService.fetchPlaces()
+            nearbyPlacesList = fileSystemService.fetch(fromDictionaryWithKey: "AllPlaces")
         }
     }
     
